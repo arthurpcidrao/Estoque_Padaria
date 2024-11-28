@@ -1,4 +1,7 @@
 package com.microsservico.estoque_padaria.Repository;
 
-public class Estoque_DAO {
+import com.microsservico.estoque_padaria.Model.Estoque;
+import org.springframework.data.repository.CrudRepository;
+
+public interface Estoque_DAO extends CrudRepository<Estoque, Integer> {
 }
