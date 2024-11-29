@@ -13,7 +13,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RequestMapping("/estoque")
 public class Controller_Estoque {
-    // http://localhost:8080/estoque
+    // http://localhost:8080/estoque/todos
     @Autowired
     private Estoque_DAO dao;
 
