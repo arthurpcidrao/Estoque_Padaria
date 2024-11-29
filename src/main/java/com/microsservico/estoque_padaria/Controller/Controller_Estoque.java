@@ -19,12 +19,12 @@ public class Controller_Estoque {
 
     @GetMapping("/todos")
     public List<Estoque> listaEstoque(){
-        return (List<Estoque>) dao.findAll();
+        return dao.findAll();
     }
 
     @GetMapping("/listaprodutos")
     public List<Estoque> listaEstoqueProdutos(@RequestParam List<Integer> ids){
-        return (List<Estoque>) dao.findAllById(ids);
+        return dao.findAllById(ids);
     }
 
     @GetMapping("/{produto}")
