@@ -52,15 +52,17 @@
 
 	<build>
 		<plugins>
-			<!-- Maven Resources Plugin para configurar a codificação UTF-8 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
+			<!-- Comentando temporariamente o maven-resources-plugin -->
+			<!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            -->
 
 			<!-- Spring Boot Maven Plugin -->
 			<plugin>
