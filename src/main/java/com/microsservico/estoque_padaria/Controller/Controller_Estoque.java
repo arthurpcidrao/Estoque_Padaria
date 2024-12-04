@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +21,11 @@ public class Controller_Estoque {
     @GetMapping("/todos")
     public List<Estoque> listaEstoque(){
         return dao.findAll();
+    }
+
+    @PostMapping("/cadastrar")
+    public Estoque cadastrarProduto(@RequestBody Estoque produto){
+        return dao.save(produto);
     }
 
     @GetMapping("/listaprodutos")
@@ -45,7 +51,6 @@ public class Controller_Estoque {
         }
         return ResponseEntity.ok("Estoque atualizado com sucesso!");
     }
-
 
     @PutMapping("/editar")
     public Estoque editarEstoque(@RequestBody Estoque produto){
